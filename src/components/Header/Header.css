@@ -1,0 +1,27 @@
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 125px;
+}
+
+.header-logo {
+  font-family: "Exo 2";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 160%;
+  color: #111111;
+}
+
+.menu a {
+  text-decoration: none;
+  padding-left: 35px;
+  font-size: 21px;
+  color: #111111;
+}
+
+.menu a:hover {
+  color: #6047ec;
+}
