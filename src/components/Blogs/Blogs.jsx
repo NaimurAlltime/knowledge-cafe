@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import Blog from "../Blog/Blog";
 import Bookmark from "../Bookmark/Bookmark";
 import "./Blogs.css";
@@ -21,9 +22,7 @@ const Blogs = () => {
   }, [readTime]);
 
   const handleReadTime = (time) => {
-    // console.log(time);
     const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
-    // console.log(previousReadTime);
     if (previousReadTime) {
       const sum = previousReadTime + time;
       localStorage.setItem("readTime", sum);
@@ -35,12 +34,13 @@ const Blogs = () => {
   };
 
   const handleToBookmark = (blogTitle) => {
-    // console.log(blog);
-    if (blogTitle) {
-      console.log("already add");
+    const previous = [...bookmark];
+    if (!previous.includes(blogTitle)) {
+      const newBookmark = [...bookmark, blogTitle];
+      setBookmark(newBookmark);
+    } else {
+      toast("already item added!");
     }
-    const newBookmark = [...bookmark, blogTitle];
-    setBookmark(newBookmark);
   };
 
   return (
