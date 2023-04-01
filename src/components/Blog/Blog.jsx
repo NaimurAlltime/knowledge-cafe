@@ -22,7 +22,7 @@ const Blog = (props) => {
         </div>
         <p className="read-time">
           {read} min read
-          <button onClick={() => handleReadTime(read)}>
+          <button onClick={() => handleToBookmark(title)}>
             <FontAwesomeIcon icon={faBookmark} />
           </button>
         </p>
@@ -36,7 +36,7 @@ const Blog = (props) => {
           <a href="/programming">#programming</a>
         </p>
       </div>
-      <button onClick={() => handleToBookmark(title)} className="mark-read">
+      <button onClick={() => handleReadTime(read)} className="mark-read">
         Mark as read
       </button>
     </div>
