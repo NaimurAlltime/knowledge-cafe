@@ -4,8 +4,9 @@ import React from "react";
 import "./Blog.css";
 
 const Blog = (props) => {
-  console.log(props.blog);
+  // console.log(props.blog);
   const { title, image, author, profile, published, read } = props.blog;
+  const handleReadTime = props.handleReadTime;
   return (
     <div className="blog">
       <img src={image} alt="" />
@@ -19,7 +20,7 @@ const Blog = (props) => {
         </div>
         <p className="read-time">
           {read} min read
-          <button>
+          <button onClick={() => handleReadTime(read)}>
             <FontAwesomeIcon icon={faBookmark} />
           </button>
         </p>

@@ -13,5 +13,20 @@
 }
 
 .bookmark-blogs-container {
-  margin-left: 30px;
+  margin-left: 40px;
+  margin-right: 120px;
+  text-align: center;
+  padding: 20px;
+}
+
+.spent-read-time {
+  border: 1px solid #6047ec;
+  padding: 10px 0;
+}
+
+.readTime {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  color: #6047ec;
 }
