@@ -35,10 +35,11 @@
   .blogs-container {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
   }
   .blog-container {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
     padding: 5px;
   }
 }

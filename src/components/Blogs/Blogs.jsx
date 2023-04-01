@@ -36,6 +36,9 @@ const Blogs = () => {
 
   const handleToBookmark = (blogTitle) => {
     // console.log(blog);
+    if (blogTitle) {
+      console.log("already add");
+    }
     const newBookmark = [...bookmark, blogTitle];
     setBookmark(newBookmark);
   };

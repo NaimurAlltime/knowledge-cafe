@@ -6,9 +6,6 @@ const Bookmark = ({ bookmark }) => {
   return (
     <div>
       <h2>Bookmarked Blogs : {bookmark.length} </h2>
-      {/* <div>
-        <h3 className="bookmark-title">{bookmark}</h3>
-      </div> */}
       {bookmark.map((title) => (
         <h3 className="bookmark-title">{title}</h3>
       ))}
