@@ -11,3 +11,9 @@
   border: 0.2px solid #babdbf;
   padding: 10px 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .bookmark-title {
+    width: 100%;
+  }
+}

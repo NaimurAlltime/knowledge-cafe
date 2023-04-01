@@ -79,9 +79,10 @@
 .mark-read {
   font-weight: 600;
   font-size: 20px;
-  line-height: 24px;
   text-decoration-line: underline;
   color: #6047ec;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -89,5 +90,17 @@
     width: 100%;
     height: 100%;
     margin-top: 180px;
+  }
+  .blog img {
+    width: 100%;
+  }
+  .author-container {
+    flex-direction: column;
+  }
+  .authorInfo {
+    flex-direction: column;
+  }
+  .authorInfo img {
+    object-fit: contain;
   }
 }
