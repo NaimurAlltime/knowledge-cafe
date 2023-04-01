@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Blog from "../Blog/Blog";
+import Bookmark from "../Bookmark/Bookmark";
 import "./Blogs.css";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [readTime, setReadTime] = useState("");
   const [time, setTime] = useState(readTime);
+  const [bookmark, setBookmark] = useState([]);
 
   useEffect(() => {
     fetch("blogs.json")
@@ -32,6 +34,12 @@ const Blogs = () => {
     }
   };
 
+  const handleToBookmark = (blogTitle) => {
+    // console.log(blog);
+    const newBookmark = [...bookmark, blogTitle];
+    setBookmark(newBookmark);
+  };
+
   return (
     <div className="blogs-container">
       <div className="blog-container">
@@ -40,6 +48,7 @@ const Blogs = () => {
             key={blog.id}
             blog={blog}
             handleReadTime={handleReadTime}
+            handleToBookmark={handleToBookmark}
           ></Blog>
         ))}
       </div>
@@ -49,7 +58,7 @@ const Blogs = () => {
             <span className="readTime">Spent time on read : {time} min</span>
           </h4>
         </div>
-        <h2>Bookmarked Blogs : </h2>
+        <Bookmark bookmark={bookmark}></Bookmark>
       </div>
     </div>
   );

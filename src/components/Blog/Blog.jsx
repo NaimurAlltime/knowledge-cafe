@@ -7,6 +7,8 @@ const Blog = (props) => {
   // console.log(props.blog);
   const { title, image, author, profile, published, read } = props.blog;
   const handleReadTime = props.handleReadTime;
+  const handleToBookmark = props.handleToBookmark;
+
   return (
     <div className="blog">
       <img src={image} alt="" />
@@ -34,7 +36,9 @@ const Blog = (props) => {
           <a href="/programming">#programming</a>
         </p>
       </div>
-      <button className="mark-read">Mark as read</button>
+      <button onClick={() => handleToBookmark(title)} className="mark-read">
+        Mark as read
+      </button>
     </div>
   );
 };

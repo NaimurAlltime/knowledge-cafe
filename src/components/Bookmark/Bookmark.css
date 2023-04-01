@@ -1,0 +1,13 @@
+.bookmark-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #111111;
+  margin-top: 5px;
+  border: 0.2px solid #babdbf;
+  padding: 10px 0;
+}
+
+.bookmark {
+  border: 0.2px solid #babdbf;
+  padding: 10px 0;
+}

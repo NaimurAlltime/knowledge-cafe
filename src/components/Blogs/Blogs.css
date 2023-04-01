@@ -30,3 +30,15 @@
   line-height: 160%;
   color: #6047ec;
 }
+
+@media only screen and (max-width: 600px) {
+  .blogs-container {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  .blog-container {
+    margin: 0;
+    padding: 5px;
+  }
+}
